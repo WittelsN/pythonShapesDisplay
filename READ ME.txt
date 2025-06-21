@@ -1,0 +1,87 @@
+Read Me:
+3D Model Viewer using PyOpenGL & PyGame
+
+Student: Noah Wittels EDUV4948089
+File: ITGDAPROJECT1.py
+Dependencies: Python 3.10+, PyOpenGL, pygame
+
+
+How to Run
+
+1. Make sure Python 3 is installed.
+2. Install required libraries:
+   pip install PyOpenGL PyOpenGL_accelerate pygame
+3. Run the program:
+   python q5_color.py
+
+Note: The OpenGL window will appear and allow real-time interaction with models.
+
+Models Supported
+- Cube
+- Pyramid
+- Triangular Prism
+
+Each model can be:
+- Translated in 3D space
+- Rotated on all 3 axes
+- Scaled non-uniformly
+- Displayed with solid colored faces and white wireframe edges
+
+
+Controls Summary
+
+MODEL SELECTION:
+  SPACEBAR – Cycle through Cube, Pyramid, and Prism
+
+TRANSLATION (Move the model):
+  W – Move Up (+Y)
+  S – Move Down (-Y)
+  A – Move Left (-X)
+  D – Move Right (+X)
+  Q – Move Forward (+Z, toward screen)
+  E – Move Backward (-Z, away from screen)
+
+ROTATION (Rotate the model in local space):
+  I – Rotate +X
+  K – Rotate -X
+  J – Rotate +Y
+  L – Rotate -Y
+  U – Rotate +Z
+  O – Rotate -Z
+
+SCALING (Stretch or squeeze the model):
+  Z – Increase scale X
+  X – Decrease scale X
+  C – Increase scale Y
+  V – Decrease scale Y
+  B – Increase scale Z
+  N – Decrease scale Z
+
+COLOURING (Question 5):
+- Each surface of a model is rendered with a solid, unique color
+- Faces are opaque with outward-facing normals
+- Edges are drawn in white for structure visibility
+
+Project Features Implemented
+
+OpenGL display window and perspective projection  
+3D model rendering (cube, pyramid, prism)  
+Keyboard-controlled translation  
+Local space rotation on X/Y/Z axes  
+Independent scaling on all 3 axes  
+Per-face flat colouring with correct normals  
+White wireframe overlay for structure  
+Model state persistence (transformations carry over when switching)
+
+Known Requirements & Notes
+
+- The application must be run in an environment that supports OpenGL (most PCs).
+- Models are centered in space, with an initial Z offset so the camera sees them properly.
+- Transformations are cumulative per model switch (state retained).
+- Ensure PyGame window is active to receive key events.
+
+
+Author Note
+
+This project was built as a complete demonstration of foundational 3D graphics operations using Python and OpenGL. All implementations are modular and commented per question as per assignment instructions.
+
